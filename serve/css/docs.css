@@ -1,0 +1,176 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  padding-top: 40px;
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+  font-size:18px;
+  line-height:normal;
+  max-width: 940px;
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  max-width: 940px;
+  min-width: 700px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bio {
+  float: left;
+  width: 360px;
+}
+
+.projectSlider {
+  float: right;
+  width: 280px;
+}
+
+#comments {
+  max-width: 500px;
+  min-width: 320px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.posts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  margin-bottom: 9px;
+  font-size: 51px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.jumbotron .btn-large {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 14px 24px;
+  margin-right: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.jumbotron .btn-large small {
+  font-size: 14px;
+}
+
+
+
+/* Footer
+-------------------------------------------------- */
+footer p {
+  float: left;
+  color: #555;
+}
+footer a {
+  color: #8085C1;
+}
+
+
+/* Responsive Docs
+-------------------------------------------------- */
+@media screen and (max-device-width: 480px) and (max-width: 480px) {
+
+  body {
+    width: 350px;
+    /*margin: 1px;*/
+    min-width: 350px;
+    padding-top: 0;
+  }
+
+  #container {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  .container {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  h2 {
+    margin-top: 27px;
+  }
+  h2 small {
+    display: block;
+    line-height: 18px;
+  }
+  h3 {
+    margin-top: 18px;
+  }
+
+  /* Adjust the jumbotron */
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+    margin-right: 0;
+  }
+  .jumbotron h1 {
+    font-size: 45px;
+    margin-right: 0;
+  }
+  .jumbotron p {
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .jumbotron .btn {
+    display: block;
+    font-size: 18px;
+    padding: 10px 14px;
+    margin: 0 auto 10px;
+  }
+
+  .projectSlider {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+
+  .contact {
+    float: inherit;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact.pull-right {
+    margin-top: 15px;
+  }
+
+}
+
+@media (min-width: 480px) and (max-width: 700px) {
+
+  .projectSlider {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}

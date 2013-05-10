@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=980" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="user-scalable=yes, width=device-width" />
+  <title>Yeoman-Gateway Your Gateway to Web App Bliss</title>
+  <meta name="author" content="William Lindner" />
+  <!--<link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="Tom Preston-Werner" type="application/atom+xml" />
+  <meta name="readability-verification" content="QCzSs992GxmRYRKVpPeZ6LE2tS8aYKxsSSQKV8YM"/>-->
+
+  <link rel="stylesheet" href="/css/bootstrap_simplex.min.css" type="text/css">
+  <!--<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css">-->
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+  <!-- Homepage CSS -->
+  <!--<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />-->
+  <link rel="stylesheet" href="/css/docs.css" type="text/css" media="screen, projection" />
+  
+  <!-- jQuery library -->
+  <script type="text/javascript" src = "/js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src = "/js/jquery.easing-1.3.js"></script>
+  
+  <!-- iosSlider plugin -->
+  <script src = "/js/jquery.iosslider.js"></script>
+
+  <style>
+  .iosSlider {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+      -moz-box-shadow: inset 0 0 10px #000000;
+      -webkit-box-shadow: inset 0 0 10px black;
+      box-shadow: inset 0 0 10px black;
+      padding: 5px;
+    }
+    
+    .iosSlider .slider {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .iosSlider .slider .item {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 192px;
+      background: #fff;
+
+      border: 1px solid black;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+    }
+    
+    .iosSlider .slider #item1 {
+      background: url(/img/anm_logo_no_border.png) no-repeat 50% 0;
+    }
+    
+    .iosSlider .slider #item2 {
+      background: url(/img/h-slider-2.jpg) no-repeat 50% 0;
+    }
+    
+    .iosSlider .slider .item .text1 {
+      position: absolute;
+      top: 10px;
+      right: 150px;
+      opacity: 0;
+      filter: alpha(opacity: 0);
+      background: #000;
+    }
+    
+    .iosSlider .slider .item .text1 span {
+      color: #fff;
+      font: bold 30px/40px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    
+    .iosSlider .slider .item .text2 {
+      position: absolute;
+      top: 150px;
+      right: 0;
+      opacity: 0;
+      filter: alpha(opacity: 0);
+      background: #000;
+      padding: 5px 7px 7px 7px;
+    }
+    
+    .iosSlider .slider .item .text2 span {
+      color: #fff;
+      font: normal 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif; 
+    }
+  </style>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+        var loaded = false;
+
+        //$("#container").css("width", "563px");
+
+        /*$(window).resize(function () {
+          if($(window).width() <= 768) {
+            console.log('less than 768');
+          }
+        });*/
+
+        $('.iosSlider').iosSlider({
+          desktopClickDrag: true,
+          snapToChildren: true,
+          scrollbarLocation: 'top',
+          scrollbarBorderRadius: '0',
+          autoSlide: true,
+          autoSlideTimer: 20000,
+          infiniteSlider: true,
+          onSliderLoaded: loadText
+        });
+
+        function loadText() {
+          $('.iosSlider').find('.text1, .text2').attr('style', '');
+          
+          $('.iosSlider').find('.text1').animate({
+            right: '100px',
+            opacity: '1'
+          }, 400, 'easeOutQuint');
+          
+          $('.iosSlider').find('.text2').delay(200).animate({
+            right: '50px',
+            opacity: '1'
+          }, 400, 'easeOutQuint');
+        }
+        
+        if(!loaded) {
+          loadText();
+        }
+      });
+    </script>
+</head>
+<body>
+<header class="jumbotron subhead" id="overview">
+<div class="container">
+  <div class="bio">
+    <h1><a href="/">William Lindner</a></h1>
+    <p class="lead">Full stack software developer.<br />Python | JS+HTML+CSS | Java | PHP.<br />My last name has 2 n's.</p>
+  </div>
+  <div class="projectSlider">
+  <div class = 'iosSlider'>
+    <div class = 'slider'>
+      <div class = 'item' id = 'item1'>
+        <a href="/projects/ApartmentsNearMetro.html">
+          <div class = 'text1'><span>Apartments<br />Near<br />Metro.com</span></div>
+          <div class = 'text2'><span>Find an apartment near<br />what's happening in DC.</span></div>
+        </a>
+      </div>
+      <div class = 'item' id = 'item2'>
+        <div class = 'text1'><span>Instanear</span></div>
+        <div class = 'text2'><span>See what's going on<br />around you, right now.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<div class="container" style="margin-bottom:40px">
+  <hr>
+  
+  <time datetime="Fri May 10 00:00:00 -0400 2013">10 May, 2013</time> &raquo; <a href="/2013/05/10/yeoman-gateway-your-gateway-to-web-app-bliss.html">Yeoman-Gateway Your Gateway to Web App Bliss</a>
+<br />
+<br />
+<div id="post">
+<p>I love well structured code. Code with clear delineation of responsibilities. Code that follows the DRY principle. Code that actually feels satisfying to maintain and will help you sleep at night. That&#8217;s probably why I still code in python. It&#8217;s also why I was so excited when I first heard about MV* for web apps. After building a jQuery spaghetti code mess for Apartments Near Metro, I knew this was not how it should be done. Fortunately, this also occurred to much smarter and more experienced programmers and spurred the creation of Angular, Ember, Backbone, and many others.</p>
+
+<p>Why was this so exciting? Because there should be a clear delineation between backend and frontend responsibilities. The backend should handle data. Data crunching, data access, data format. It really shouldn&#8217;t care if you are requesting that data from a web browser, or an iPad app or cURL.</p>
+
+<p>That brings me to Yeoman-Gateway. I wanted to create a starting point for new web apps. I had experience with Backbone.js, so I chose Backbone.js + Marionette.js as the MV* framework. I&#8217;ve been happy using Require.js, so I chose to use it for modularizing and assembling code. Lastly, I chose Yeoman because it provides easy dependency handling using Bower, automated Grunt.js configuration and useful scaffolding. Lastly, I used Bootstrap-sass to provide simple styling. This is by no means a statement of superiority of these frameworks to any others, but happened to be what made the most sense to me and seemed to blend well together for my desired workflow. I want this project to serve as an easy and complete starting point as well as an example of best practices for these tools. I found plenty of code snippets for doing separate best practices, but not a complete example in code. Hopefully this project will serve as that and will help more people get started creating web applications.</p>
+
+<p>Get started with the <a href='https://github.com/wlindner/Yeoman-Gateway'>github repo</a> and <a href='http://williamlindner.com/Yeoman-Gateway'>demo</a></p>
+</div>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="wlindner">Tweet</a>
+
+<!-- Google + -->
+<p><g:plusone size="medium"></g:plusone></p>
+
+<script type="text/javascript" src="http://www.reddit.com/buttonlite.js?i=2&styled=off&url=http://williamlindner.com/2013/05/10/yeoman-gateway-your-gateway-to-web-app-bliss.html&newwindow=1"></script>
+
+
+
+<div id="comments">
+	<h1>Comments</h1>
+	<br />
+
+	<div id="disqus_thread"></div>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+  
+  <hr>
+  <footer>
+    <div class="contact">
+      <p>
+        William Lindner<br />
+        Cofounder of <a href="http://trycourier.com/">Courier</a><br />
+      </p>
+    </div>
+    <div class="contact pull-right">
+      <p>
+        <a href="http://www.linkedin.com/in/wlindner">linkedin.com/in/wlindner</a><br />
+        <a href="http://github.com/wlindner/">github.com/wlindner</a><br />
+        <a href="http://twitter.com/wlindner/">twitter.com/wlindner</a><br />
+      </p>
+    </div>
+  </footer>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33225523-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- Google Analytics end -->
+</div>
+
+<!-- Put this just before the closing body tag -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Add this just before the closing body tag of your web page --> 
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'williamlindner'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+</body>
+</html>

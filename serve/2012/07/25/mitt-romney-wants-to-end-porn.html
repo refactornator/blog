@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=980" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="user-scalable=yes, width=device-width" />
+  <title>Mitt Romney Wants to End Porn</title>
+  <meta name="author" content="William Lindner" />
+  <!--<link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="Tom Preston-Werner" type="application/atom+xml" />
+  <meta name="readability-verification" content="QCzSs992GxmRYRKVpPeZ6LE2tS8aYKxsSSQKV8YM"/>-->
+
+  <link rel="stylesheet" href="/css/bootstrap_simplex.min.css" type="text/css">
+  <!--<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css">-->
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+  <!-- Homepage CSS -->
+  <!--<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />-->
+  <link rel="stylesheet" href="/css/docs.css" type="text/css" media="screen, projection" />
+  
+  <!-- jQuery library -->
+  <script type="text/javascript" src = "/js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src = "/js/jquery.easing-1.3.js"></script>
+  
+  <!-- iosSlider plugin -->
+  <script src = "/js/jquery.iosslider.js"></script>
+
+  <style>
+  .iosSlider {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+      -moz-box-shadow: inset 0 0 10px #000000;
+      -webkit-box-shadow: inset 0 0 10px black;
+      box-shadow: inset 0 0 10px black;
+      padding: 5px;
+    }
+    
+    .iosSlider .slider {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .iosSlider .slider .item {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 192px;
+      background: #fff;
+
+      border: 1px solid black;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+    }
+    
+    .iosSlider .slider #item1 {
+      background: url(/img/anm_logo_no_border.png) no-repeat 50% 0;
+    }
+    
+    .iosSlider .slider #item2 {
+      background: url(/img/h-slider-2.jpg) no-repeat 50% 0;
+    }
+    
+    .iosSlider .slider .item .text1 {
+      position: absolute;
+      top: 10px;
+      right: 150px;
+      opacity: 0;
+      filter: alpha(opacity: 0);
+      background: #000;
+    }
+    
+    .iosSlider .slider .item .text1 span {
+      color: #fff;
+      font: bold 30px/40px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    
+    .iosSlider .slider .item .text2 {
+      position: absolute;
+      top: 150px;
+      right: 0;
+      opacity: 0;
+      filter: alpha(opacity: 0);
+      background: #000;
+      padding: 5px 7px 7px 7px;
+    }
+    
+    .iosSlider .slider .item .text2 span {
+      color: #fff;
+      font: normal 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif; 
+    }
+  </style>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+        var loaded = false;
+
+        //$("#container").css("width", "563px");
+
+        /*$(window).resize(function () {
+          if($(window).width() <= 768) {
+            console.log('less than 768');
+          }
+        });*/
+
+        $('.iosSlider').iosSlider({
+          desktopClickDrag: true,
+          snapToChildren: true,
+          scrollbarLocation: 'top',
+          scrollbarBorderRadius: '0',
+          autoSlide: true,
+          autoSlideTimer: 20000,
+          infiniteSlider: true,
+          onSliderLoaded: loadText
+        });
+
+        function loadText() {
+          $('.iosSlider').find('.text1, .text2').attr('style', '');
+          
+          $('.iosSlider').find('.text1').animate({
+            right: '100px',
+            opacity: '1'
+          }, 400, 'easeOutQuint');
+          
+          $('.iosSlider').find('.text2').delay(200).animate({
+            right: '50px',
+            opacity: '1'
+          }, 400, 'easeOutQuint');
+        }
+        
+        if(!loaded) {
+          loadText();
+        }
+      });
+    </script>
+</head>
+<body>
+<header class="jumbotron subhead" id="overview">
+<div class="container">
+  <div class="bio">
+    <h1><a href="/">William Lindner</a></h1>
+    <p class="lead">Full stack software developer.<br />Python | JS+HTML+CSS | Java | PHP.<br />My last name has 2 n's.</p>
+  </div>
+  <div class="projectSlider">
+  <div class = 'iosSlider'>
+    <div class = 'slider'>
+      <div class = 'item' id = 'item1'>
+        <a href="/projects/ApartmentsNearMetro.html">
+          <div class = 'text1'><span>Apartments<br />Near<br />Metro.com</span></div>
+          <div class = 'text2'><span>Find an apartment near<br />what's happening in DC.</span></div>
+        </a>
+      </div>
+      <div class = 'item' id = 'item2'>
+        <div class = 'text1'><span>Instanear</span></div>
+        <div class = 'text2'><span>See what's going on<br />around you, right now.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<div class="container" style="margin-bottom:40px">
+  <hr>
+  
+  <time datetime="Wed Jul 25 00:00:00 -0400 2012">25 Jul, 2012</time> &raquo; <a href="/2012/07/25/mitt-romney-wants-to-end-porn.html">Mitt Romney Wants to End Porn</a>
+<br />
+<br />
+<div id="post">
+<p>Check out this interesting video featuring the presidential hopeful, Mitt Romney.</p>
+<div style='text-align:center'>
+<iframe height='315' frameborder='0' src='http://www.youtube.com/embed/K61UADVD4VA?rel=0' width='420'>       </iframe>
+</div>
+<p>Wait, what? A button for parents to click to block porn? Great idea! Porn is innappropriate for young people, I think anyone can agree with that. But how would that work? I don&#8217;t think anyone stopped to consider this. It&#8217;s sort of like proposing a button to end car accidents, or a gun that only shoots bad guys.</p>
+
+<p>So, rather than make fun of such a ridiculous claim. And instead of pondering the irony of a supposedly small government republican advocating for installation of software/hardware, created by the government, into every single computer bought in this country. I&#8217;m going to consider <strong>HOW</strong> someone could ever pull off a feat such as this.</p>
+
+<h2 id='browser'>Browser</h2>
+
+<p>People access porn in a web browser, right? So, why not create a browser extension. Ok, all you&#8217;ve got to do is check the website the person is trying to access, if it&#8217;s on a blacklist: bingo, it&#8217;s blocked. So what happens if they don&#8217;t use a browser and use file transfer like bittorrent? What happens if they go to an image sharing site like http://imgur.com that is chock full of cat pictures, as well as pornography? What if they use a web browser that doesn&#8217;t support extensions, like on your iPhone or iPad? Well, that won&#8217;t work. You&#8217;ve got to get more invasive!</p>
+
+<h2 id='desktop'>Desktop</h2>
+
+<p>How about a filter application that runs on your desktop and reads all of the traffic, no matter which browser, and blocks certain sites from being accessed? You&#8217;re pretty much in the same boat as the browser extension, just one layer of abstraction deeper. You can still find innappropriate material using p2p networks. Of course, you could always install a keylogger on your own computer to capture that &#8220;master password&#8221; that was used to install the filter. Why not install a free, open source OS that has no filter software on it? You can even boot from a flash drive. No way this will work.</p>
+
+<h2 id='appliance'>Appliance</h2>
+
+<p>Let&#8217;s go one level deeper. Why not build an appliance that goes in between your modem and your router? All traffic gets analyzed before it even comes to you. If it&#8217;s considered bad, it doesn&#8217;t get sent to you, if it&#8217;s good, it goes through as normal. This would work great for specific web sites that are on a blacklist, but what about images stored in a .zip archive passed through p2p networks, or what if you visit facebook and a friend of a friend gets a little trigger happy with the camera after having a few too many tequila shots in Tijuana? Those images could be lewd, even pornographic, and if they came from a reputable site, you would have no way of knowing. You would have to actually look at the images themselves and detect whether it was pornography or not.</p>
+
+<h2 id='what_is_love'>What is Love?</h2>
+
+<p>There&#8217;s one glaring omission to this entire argument though: what is pornography? Justice Potter Stewart famously explained it as <a href='http://en.wikipedia.org/wiki/I_know_it_when_I_see_it'>&#8220;I know it when I see it&#8221;</a>. Oh, so a vision based machine learning algorithm? Well, no. Like many things, there&#8217;s just no &#8220;one size fits all&#8221; answer. You can&#8217;t apply an algorithm to do the work of a discerning parent. Not only that, but it&#8217;s pretty much impossible to block out just the bad stuff, you have to pretty much block everything. So creating a blacklist of websites, will never work unless you take the most restrictive definition of pornography, and end up blocking classic works of art or harmless websites that feature user uploaded content as well as the pornography.</p>
+
+<h2 id='politics'>Politics</h2>
+
+<p>At the end of the day, this is simply politics. A completely factless claim meant to rile up a crowd of people that will probably never question whether this claim makes any sense at all. <div style='text-align:center'>
+<iframe height='315' frameborder='0' src='http://www.youtube.com/embed/Qh2sWSVRrmo?rel=0' width='420'>       </iframe>
+</div></p>
+</div>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="wlindner">Tweet</a>
+
+<!-- Google + -->
+<p><g:plusone size="medium"></g:plusone></p>
+
+<script type="text/javascript" src="http://www.reddit.com/buttonlite.js?i=2&styled=off&url=http://williamlindner.com/2012/07/25/mitt-romney-wants-to-end-porn.html&newwindow=1"></script>
+
+
+
+<div id="comments">
+	<h1>Comments</h1>
+	<br />
+
+	<div id="disqus_thread"></div>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+  
+  <hr>
+  <footer>
+    <div class="contact">
+      <p>
+        William Lindner<br />
+        Cofounder of <a href="http://trycourier.com/">Courier</a><br />
+      </p>
+    </div>
+    <div class="contact pull-right">
+      <p>
+        <a href="http://www.linkedin.com/in/wlindner">linkedin.com/in/wlindner</a><br />
+        <a href="http://github.com/wlindner/">github.com/wlindner</a><br />
+        <a href="http://twitter.com/wlindner/">twitter.com/wlindner</a><br />
+      </p>
+    </div>
+  </footer>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33225523-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- Google Analytics end -->
+</div>
+
+<!-- Put this just before the closing body tag -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Add this just before the closing body tag of your web page --> 
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'williamlindner'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+</body>
+</html>
