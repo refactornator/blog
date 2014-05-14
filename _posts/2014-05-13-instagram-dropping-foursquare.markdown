@@ -11,13 +11,13 @@ Here's what I found.
 
 The most obvious change is that the Instagram app no longer gives attribution to Foursquare. This attribution is required if you use their service according to the [Foursquare Developer Documentation](https://developer.foursquare.com/overview/attribution). This is not definitive proof on it's own, but is still a pretty clear sign.
 
-{% img instagram-foursquare-attribution /img/instagram-powered-by-foursquare.png 640 480 'No Foursquare Location attribution.' 'No Foursquare Location attribution.' %}
+![No Foursquare Location attribution](/img/instagram-powered-by-foursquare.png)
 <br />
 *Exhibit A: No more Facebook Location Attribution*
 
 What I found much more interesting was the fact that Instagram now provides an API call for mapping a Facebook Place to an Instagram Location. Check out the /locations/search endoint at the end of [this page](http://instagram.com/developer/endpoints/locations/#get_locations_search). It now includes a parameter for linking Facebook Place IDs to Instagram IDs.
 
-{% img instagram-foursquare-attribution /img/instagram-developer-endpoint.png 734 423 'New API Options for Mapping Facebook Places to Instagram, just like Foursquare' 'New API Options for Mapping Facebook Places to Instagram, just like Foursquare' %}
+![New API Options for Mapping Facebook Places to Instagram, just like Foursquare](/img/instagram-developer-endpoint.png)
 <br />
 *Exhibit B: New API Options for Mapping Facebook Places to Instagram, just like Foursquare*
 
