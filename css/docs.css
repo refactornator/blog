@@ -50,6 +50,14 @@ body {
   list-style-type: none;
 }
 
+.posts li {
+  margin-bottom: 40px;
+}
+
+.posts li > time {
+  font-weight: bold;
+}
+
 
 /* Jumbotrons
 -------------------------------------------------- */
