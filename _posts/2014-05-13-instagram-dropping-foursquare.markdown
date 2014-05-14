@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Instagram is Swapping Foursquare for Facebook Places
+title: Instagram Dropping Foursquare for Facebook Places
 ---
 
 [Alex Sailer](https://twitter.com/alexsailer) and [I](https://twitter.com/wlindner) created [Spotsy](https://itunes.apple.com/us/app/spotsy/id714622289?mt=8) to solve a shortcoming of the official Instagram app. That shortcoming was location based search. Whether it's nearby, major cities or anywhere you want to see. Shouldn't you be able to see what's being posted there RIGHT NOW? Of course you should, so we built [Spotsy](https://itunes.apple.com/us/app/spotsy/id714622289?mt=8). In the past, Instagram has relied on Foursquare for this location information, but not anymore.
