@@ -4,6 +4,19 @@
 /*
 /*****************************************************************************/
 
+$royal: #366ddc;
+$sapphire: #2955ae;
+$midnight: #00527e;
+$shadow: #0e2451;
+$plum: #583452;
+$berry: #a24352;
+$ruby: #ec5252;
+$tangerine: #f2744c;
+$creamsicle: #f99645;
+$solar: #ffb83f;
+$store: #ced1d6;
+$snuggles: #829fd9;
+
 /* Global Reset */
 * {
   margin: 0;
@@ -14,7 +27,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 12px 'Ubuntu', sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -28,6 +41,14 @@ p { margin: 1em 0; }
 a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
 
 /*****************************************************************************/
 /*
@@ -45,7 +66,6 @@ a:visited { color: #a0a; }
 
 .posts span {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
 
@@ -97,18 +117,20 @@ a:visited { color: #a0a; }
 .footer {
   font-size: 80%;
   color: #666;
-  border-top: 4px solid #eee;
+  border-top: 1px solid $store;
   margin-top: 2em;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .footer .contact {
-  float: left;
-  margin-right: 3em;
-}
+  color: $store;
+  letter-spacing: 0.2em;
 
-.footer .contact a {
-  color: #8085C1;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .footer .rss {

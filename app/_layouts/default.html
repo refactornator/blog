@@ -6,6 +6,9 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- custom fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
         <!-- build:css({app,.tmp}) /css/main.css -->
         <!-- Syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
@@ -21,21 +24,23 @@
           <div class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
             <a class="extra" href="/">home</a>
+            <a class="extra" href="/about.html">about</a>
+            <a class="extra" href="/projects.html">projects</a>
           </div>
 
           {{ content }}
 
           <div class="footer">
-            <div class="contact">
+            <div class="contact left">
               <p>
-                William Lindner<br />
-                <a href="mailto:wlindner522@gmail.com">wlindner522@gmail.com</a>
+                <a href="mailto:wlindner522@gmail.com">© 2014 William Lindner</a>
               </p>
             </div>
-            <div class="contact">
+            <div class="contact right">
               <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+                <a href="https://twitter.com/wlindner">Twitter</a> | 
+                <a href="https://github.com/wlindner">Github</a> | 
+                <a href="https://linkedin.com/in/wlindner">Linkedin</a>
               </p>
             </div>
           </div>

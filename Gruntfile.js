@@ -383,14 +383,14 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('deploy', [
     'check',
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',
