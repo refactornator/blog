@@ -1,8 +1,8 @@
 {
-  "name": "wlindnergithubcom2",
+  "name": "wlindnergithubcom",
   "private": true,
   "version": "0.0.0",
-  "description": "Yeoman workflow for wlindner.github.com2",
+  "description": "Yeoman workflow for wlindner.github.com",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
