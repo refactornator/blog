@@ -17,6 +17,14 @@ $solar: #ffb83f;
 $store: #ced1d6;
 $snuggles: #829fd9;
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /* Global Reset */
 * {
   margin: 0;
@@ -83,9 +91,19 @@ a:visited { color: #a0a; }
   line-height: 1.5em;
 }
 
-.header a {
-  font-weight: bold;
-  text-decoration: none;
+.header {
+  background: #f3f5f8 url("/img/header.png") no-repeat;
+  height: 120px;
+  transform-style: preserve-3d;
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .links {
+    @include vertical-align;
+  }
 }
 
 .title {
@@ -103,7 +121,13 @@ a:visited { color: #a0a; }
 
 .header a.extra {
   color: #aaa;
-  margin-left: 1em;
+  margin-left: 2em;
+  font-style: italic;
+
+  img {
+    margin-bottom: 5px;
+    vertical-align: middle;
+  }
 }
 
 .header a.extra:hover {
