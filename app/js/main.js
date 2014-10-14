@@ -1,12 +1,21 @@
 
 /* global Masonry */
 
-var container = document.querySelector('#projects');
+function initMasonry() {
+  var container = document.querySelector('#projects');
 
-if(container) {
-  var msnry = new Masonry( container, {
-    // options
-    itemSelector: '.project',
-    gutter: 20
-  });
-}
+  if(container) {
+    new Masonry( container, {
+      itemSelector: '.project',
+      gutter: 20
+    });
+  }
+};
+initMasonry();
+
+pjax.connect({
+  container: 'site',
+  complete: function(e){
+    initMasonry();
+  }
+});
