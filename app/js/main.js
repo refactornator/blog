@@ -1,4 +1,6 @@
 
+/* global Masonry */
+
 var container = document.querySelector('#projects');
 
 if(container) {
