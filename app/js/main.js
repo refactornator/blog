@@ -1,4 +1,5 @@
-/* global Masonry */
+/* global Masonry, Velocity, pjax */
+/* jshint ignore:start */
 
 function initMasonry() {
     var container = document.querySelector('#projects');
@@ -9,7 +10,7 @@ function initMasonry() {
             gutter: 20
         });
     }
-};
+}
 
 initMasonry();
 
