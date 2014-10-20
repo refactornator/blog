@@ -7,6 +7,7 @@ function initMasonry() {
     if (container) {
         new Masonry(container, {
             itemSelector: '.project',
+            isFitWidth: true,
             gutter: 20
         });
     }
