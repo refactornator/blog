@@ -80,6 +80,11 @@ img {
   }
 }
 
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -121,6 +126,7 @@ img {
   text-align: left;
   padding: 2em;
   font-size: 90%;
+  padding-bottom: 60px;
 }
 
 @media all and (min-width: 830px) {
@@ -179,38 +185,58 @@ img {
   color: #aaa;
 }
 
-.footer {
+footer {
+  max-width: 830px;
+  height: 60px;
+  margin: 0 auto;
   font-size: 80%;
   color: #666;
+  background-color: white;
   border-top: 1px solid $store;
   margin-top: 2em;
   overflow: hidden;
   text-transform: uppercase;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .contact {
+    color: $store;
+    letter-spacing: 0.2em;
+    line-height: 32px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
-.footer .contact {
-  color: $store;
-  letter-spacing: 0.2em;
+@media all and (max-width: 830px) {
+  footer {
+    margin: 0 20px;
 
-  a {
-    color: inherit;
-    text-decoration: none;
+    .contact {
+      line-height: normal;
+    }
   }
 }
 
 @media all and (max-width: 500px) {
-  .footer .contact {
+  footer .contact {
     text-align: center;
   }
 }
 
-.footer .rss {
+footer .rss {
   margin-top: 1.1em;
   margin-right: -.2em;
   float: right;
 }
 
-.footer .rss img {
+footer .rss img {
   border: 0;
 }
 
