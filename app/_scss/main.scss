@@ -87,15 +87,25 @@ img {
 /*****************************************************************************/
 .posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin: 0 auto;
   
   li {
-    line-height: 1.75em;
-  }
+    line-height: normal;
+    margin-left: 20px;
+    margin-bottom: 40px;
 
-  span {
-    color: #aaa;
-    font-size: 80%;
+    a {
+      font-size: 24px;
+      color: $shadow;
+      text-decoration: none;
+    }
+
+    span {
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -116,7 +126,7 @@ img {
 @media all and (min-width: 830px) {
   .site {
     width: 830px;
-    margin: 3em auto 2em;
+    margin: 0 auto;
     text-align: justify;
     font-size: 115%;
   }
