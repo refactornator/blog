@@ -20,7 +20,11 @@ $snuggles: #829fd9;
 @mixin vertical-align {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+     -o-transform: translateY(-50%);
+        transform: translateY(-50%);
 }
 
 /* Global Reset */
@@ -138,10 +142,14 @@ img {
   }
 }
 
-.header {
+header {
   background: #f3f5f8 url("/img/header.png") no-repeat;
   height: 120px;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
 
   a {
     font-weight: bold;
@@ -166,7 +174,7 @@ img {
   color: #000;
 }
 
-.header a.extra {
+header a.extra {
   color: #aaa;
   margin-left: 2em;
   font-style: italic;
@@ -177,7 +185,7 @@ img {
   }
 }
 
-.header a.extra:hover {
+header a.extra:hover {
   color: #000;
 }
 
@@ -225,6 +233,10 @@ footer {
 }
 
 @media all and (max-width: 500px) {
+  header {
+    height: 80px;
+  }
+
   footer .contact {
     text-align: center;
   }
