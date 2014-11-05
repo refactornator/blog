@@ -16,15 +16,7 @@ function initMasonry() {
 function reloadDisqus() {
   if(DISQUS !== undefined && document.querySelector('#disqus_thread')) {
     var url = window.location.href,
-      title = document.title,
-      pathname = window.location.pathname,
-      identifier = pathname.substr(pathname.lastIndexOf('/') + 1);
-
-    if(identifier === 'instagram-dropping-foursquare.html') {
-      identifier = 2683337360;
-    } else if (identifier === 'ApartmentsNearMetro.html') {
-      identifier = 813744328;
-    }
+      title = document.title;
 
     DISQUS.reset({
       reload: true,
