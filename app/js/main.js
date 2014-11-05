@@ -1,4 +1,4 @@
-/* global Masonry, Velocity, pjax */
+/* global Masonry, Velocity, pjax, DISQUS */
 /* jshint ignore:start */
 
 function initMasonry() {
@@ -11,6 +11,18 @@ function initMasonry() {
             gutter: 20
         });
     }
+}
+
+function reloadDisqus() {
+  if(DISQUS !== undefined && document.querySelector('#disqus_thread')) {
+    DISQUS.reset({
+      reload: true,
+      config: function () {  
+        this.page.identifier = document.title;  
+        this.page.url = window.location.href;
+      }
+    });
+  }
 }
 
 initMasonry();
@@ -48,6 +60,7 @@ document.onclick = function(e) {
           parseLinksOnload: false,
           complete: function(e) {
             initMasonry();
+            reloadDisqus();
 
             Velocity(containerEl, {
               opacity: [ 1, 0 ], translateY: [ 0, 20 ], translateZ: 0
