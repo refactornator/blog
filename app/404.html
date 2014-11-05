@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Page Not Found</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+        video { 
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			background: #000;
+			background-size: cover;
+			transition: 1s opacity;
+		}
+        @media only screen and (max-width: 280px) {
+            body, p {
+                width: 95%;
+            }
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+	<video autoplay id="bgvid" loop>
+	<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+	<source src="/video/404.webm" type="video/webm">
+	<source src="/video/404.mp4" type="video/mp4">
+	</video>
+
+    <h1>Page Not Found</h1>
+    <p>Sorry, but the page you were trying to view does not exist.</p>
+</body>
+</html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
