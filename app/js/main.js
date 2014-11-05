@@ -21,7 +21,9 @@ function reloadDisqus() {
       identifier = pathname.substr(pathname.lastIndexOf('/') + 1);
 
     if(identifier === 'instagram-dropping-foursquare.html') {
-      identifier = 2683337360
+      identifier = 2683337360;
+    } else if (identifier === 'ApartmentsNearMetro.html') {
+      identifier = 813744328;
     }
 
     DISQUS.reset({
@@ -29,7 +31,6 @@ function reloadDisqus() {
       config: function () {
         this.page.url = url;
         this.page.title = title;
-        this.page.identifier = identifier;
       }
     });
   }
