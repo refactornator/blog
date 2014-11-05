@@ -15,11 +15,21 @@ function initMasonry() {
 
 function reloadDisqus() {
   if(DISQUS !== undefined && document.querySelector('#disqus_thread')) {
+    var url = window.location.href,
+      title = document.title,
+      pathname = window.location.pathname,
+      identifier = pathname.substr(pathname.lastIndexOf('/') + 1);
+
+    if(identifier === 'instagram-dropping-foursquare.html') {
+      identifier = 2683337360
+    }
+
     DISQUS.reset({
       reload: true,
-      config: function () {  
-        this.page.identifier = document.title;  
-        this.page.url = window.location.href;
+      config: function () {
+        this.page.url = url;
+        this.page.title = title;
+        this.page.identifier = identifier;
       }
     });
   }
