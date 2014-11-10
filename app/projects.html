@@ -7,10 +7,17 @@ title: Projects - William Lindner, 2 n's.
   <div class="project">
     <a style="display:block" target="_blank" href="http://spotsyapp.com">
       <div class="thumbnail" style="background-image: url('/img/projects/spotsy.png')"></div>
-      <h2>Spotsy</h2>
+      <h2>Spotsy</h2></a>
       <h4>iOS App</h4>
-      <p>Spotsy aims to fill the void of insightful search on the Instagram platform. The goal was to create a delightful experience through an intuitive interface, and interactions.</p>
-    </a>
+      <p>Spotsy aims to fill the void of insightful search on the Instagram platform. The goal was to create a delightful experience through an intuitive interface, and interactions.
+      </p>
+      {% for tag in site.tags %}
+        {% assign tagName = tag | first %}
+        {% if tagName == 'spotsy' %}
+          {% assign posts = tag | last %}
+          <a class="tag-posts" href="/tags/{{ tagName }}">{{ posts | size | pluralize: "blog post" }}</a>
+        {% endif %}
+      {% endfor %}
   </div>
 
   <div class="project">
@@ -52,10 +59,16 @@ title: Projects - William Lindner, 2 n's.
   <div class="project">
     <a style="display:block" target="_blank" href="https://github.com/wlindner/Yeoman-Gateway">
       <div class="thumbnail" style="background-image: url('/img/projects/yeoman-gateway.png')"></div>
-      <h2>Yeoman Gateway</h2>
+      <h2>Yeoman Gateway</h2></a>
       <h4>Open Source</h4>
       <p>This project aims to give you a starting point for a large Client Side MV* webapp.</p>
-    </a>
+      {% for tag in site.tags %}
+        {% assign tagName = tag | first %}
+        {% if tagName == 'yeoman-gateway' %}
+          {% assign posts = tag | last %}
+          <a class="tag-posts" href="/tags/{{ tagName }}">{{ posts | size | pluralize: "blog post" }}</a>
+        {% endif %}
+      {% endfor %}
   </div>
 
   <div class="project">

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Yeoman-Gateway Your Gateway to Web App Bliss
+tags: yeoman-gateway
 ---
 
 I love well structured code. Code with clear delineation of responsibilities. Code that follows the DRY principle. Code that actually feels satisfying to maintain and will help you sleep at night. That's probably why I still code in python. It's also why I was so excited when I first heard about MV* for web apps. After building a jQuery spaghetti code mess for Apartments Near Metro, I knew this was not how it should be done. Fortunately, this also occurred to much smarter and more experienced programmers and spurred the creation of Angular, Ember, Backbone, and many others.
