@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Codepen - Add & Remove
+title: Codepen - Add and Remove
 ---
 
 I was browsing Dribbble the other day and ran across this cool animation created by Dribbble user [Toxinboy](https://dribbble.com/Toxinboy).
