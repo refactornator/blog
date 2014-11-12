@@ -433,6 +433,7 @@ header {
     transform-origin: center center;
     
     /*Set our animation play state to paused initially */
+    -webkit-animation-play-state: paused!important;
     animation-play-state: paused!important;
   }
 
@@ -453,6 +454,7 @@ header {
   .playing circle,
   .playing line,
   .playing path {
+    -webkit-animation-play-state: running!important;
     animation-play-state: running!important;
   }
 }
