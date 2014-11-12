@@ -430,7 +430,8 @@ header {
   circle, line, path {
     fill: none;
     stroke: white;
-    transform-origin: center center;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
     
     /*Set our animation play state to paused initially */
     -webkit-animation-play-state:paused!important;
