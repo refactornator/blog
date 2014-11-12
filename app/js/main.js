@@ -45,9 +45,9 @@ document.onclick = function(e) {
     if (e.which > 1 || e.metaKey || e.ctrlKey) return;
 
     // Don't fire normal event
-    if(e.preventDefault){ e.preventDefault(); }else{ e.returnValue = false; }
+    if(e.preventDefault){ e.preventDefault(); } else { e.returnValue = false; }
 
-    // Take no action if we are already on said page?
+    // Take no action if we are already on said page
     if (document.location.href === element.href) return false;
 
     // handle the load.
@@ -76,5 +76,27 @@ document.onclick = function(e) {
     });
 
     return false; // prevent default action and stop event propagation
+  } else if(element && element.href === 'https://twitter.com/share') {
+    // TWITTERS 
+    var width  = 575,
+      height = 400,
+      message = document.title,
+      url    = element.href + '?text=' + encodeURIComponent(message),
+      opts   = 'status=1' +
+      ',width='  + width  +
+      ',height=' + height;
+
+    window.open(url, 'twitter', opts);
+
+    return false;
+  } else if(element && element.href === 'https://www.facebook.com/sharer/sharer.php') {
+    // FACEBOOKS
+    var width  = 575,
+      height = 400,
+      url    = 'https://www.facebook.com/sharer/sharer.php?u=' + document.location.href,
+      opts   = 'width=' + width +
+      ',height=' + height;
+
+    window.open(url, 'twitter', opts);
   }
 };

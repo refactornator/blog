@@ -41,6 +41,7 @@ html, body { height: 100%; }
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -288,6 +289,69 @@ footer .rss img {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+
+/*****************************************************************************/
+/*
+/* Social Share Button
+/*
+/*****************************************************************************/
+.social-share {
+  float: right;
+  position: relative;
+  outline: 0;
+  cursor: pointer;
+  
+  .block {
+    width: 44px;
+    height: 44px;
+    display: block;
+    background-color: #ced1d6;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .share, .items {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .share {
+    transition: all 0.2s;
+    background-image: url(http://i.imgur.com/B06f0qo.png);
+  }
+
+  .items > .item {
+    opacity: 0;
+    transform: translate(44px, 0);
+  }
+  
+  .twitter {
+    transition: all 0.2s;
+    transition-delay: 0.0s;
+  }
+
+  .email {
+    transition: all 0.2s;
+    transition-delay: 0.05s;
+  }
+
+  .facebook {
+    transition: all 0.2s;
+    transition-delay: 0.1s;
+  }
+}
+
+.social-share:focus .share {
+  transform: translate(-44px,0);
+  opacity: 0;
+}
+
+.social-share:focus .item {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 /*****************************************************************************/
