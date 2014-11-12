@@ -1,3 +1,6 @@
+/* global $ */
+/* jshint ignore:start */
+
 var width = $('header').width(),
     height = $('header').height(),
     margin = Math.min(width, height) * .2,
