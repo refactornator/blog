@@ -149,8 +149,6 @@ function generateSteps(xOffset) {
   $steps.appendTo($svg);
 }
 
-$( "header" ).hover(startAnimation, stopAnimation);
-
 function animateCircles() {
   $('circle').attr("class", "playing");  
 }

@@ -449,7 +449,10 @@ header {
     stroke-linecap: round;
   }
 
-  .playing {
+  .playing,
+  .playing circle,
+  .playing line,
+  .playing path {
     animation-play-state: running!important;
   }
 }

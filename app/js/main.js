@@ -34,15 +34,21 @@ function reloadDisqus() {
   }
 }
 
-initMasonry();
+$(function() {
+  initMasonry();
 
-if(mobilecheck()) {
-  var socialShare = document.querySelectorAll('.social-share');
+  if(mobilecheck()) {
+    var socialShare = document.querySelectorAll('.social-share');
 
-  if(socialShare && socialShare.length > 0) {
-    socialShare[0].style.display = 'none';
+    if(socialShare && socialShare.length > 0) {
+      socialShare[0].style.display = 'none';
+    }
+
+    $("header svg").attr('class', 'playing');
+  } else {
+    $("header").hover(startAnimation, stopAnimation);
   }
-}
+});
 
 document.onclick = function(e) {
   e = e || window.event;
