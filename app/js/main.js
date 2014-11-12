@@ -65,7 +65,7 @@ document.onclick = function(e) {
     if (document.location.href === element.href) return false;
 
     // handle the load.
-    Velocity(containerEl, {
+    $.Velocity(containerEl, {
       opacity: [ 0, 1 ], translateY: 20, translateZ: 0
     }, {
       queue: false,
@@ -79,7 +79,7 @@ document.onclick = function(e) {
             initMasonry();
             reloadDisqus();
 
-            Velocity(containerEl, {
+            $.Velocity(containerEl, {
               opacity: [ 1, 0 ], translateY: [ 0, 20 ], translateZ: 0
             }, {
               duration: 300

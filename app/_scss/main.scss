@@ -143,25 +143,6 @@ img, video, canvas {
   }
 }
 
-header {
-  background: #f3f5f8 url("/img/header.png") no-repeat;
-  height: 120px;
-  -webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-     -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-
-  a {
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .links {
-    @include vertical-align;
-  }
-}
-
 .title {
   display: inline-block;
   margin-bottom: 2em;
@@ -412,4 +393,87 @@ footer .rss img {
     bottom: 10px;
     left: 30px;
   }
+}
+
+header {
+  height: 120px;
+  width: 100%;
+  background: #f3f5f8;
+  position: relative;
+
+  -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .links {
+    background-color: #f3f5f8;
+    display: inline-block;
+    z-index: 1;
+    @include vertical-align;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  circle, line, path {
+    fill: none;
+    stroke: white;
+    transform-origin: center center;
+    
+    /*Set our animation play state to paused initially */
+    animation-play-state: paused!important;
+  }
+
+  circle {
+    stroke-width: 2px;
+  }
+
+  line {
+    stroke-width: 3px;
+  }
+
+  path {
+    stroke-width: 2px;
+    stroke-linecap: round;
+  }
+
+  .playing {
+    animation-play-state: running!important;
+  }
+}
+
+@keyframes growShrink {
+  from { transform: none; }
+  50% { transform: scale(1.5); }
+  to { transform: none; }
+}
+
+@keyframes spin {
+  from { transform: none; }
+  50% { transform: rotate(360deg); }
+  to { transform: none; }
+}
+
+@keyframes lineDisappear {
+  from { stroke-dashoffset: null; }
+  50% { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: null; }
+}
+
+@keyframes lineCrawl {
+  from { stroke-dashoffset: null; }
+  50% { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: null; }
 }
