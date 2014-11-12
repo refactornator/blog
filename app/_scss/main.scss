@@ -433,8 +433,8 @@ header {
     transform-origin: center center;
     
     /*Set our animation play state to paused initially */
-    -webkit-animation-play-state: paused!important;
-    animation-play-state: paused!important;
+    -webkit-animation-play-state:paused!important;
+    animation-play-state:paused!important;
   }
 
   circle {
@@ -450,30 +450,51 @@ header {
     stroke-linecap: round;
   }
 
-  .playing,
-  .playing circle,
-  .playing line,
-  .playing path {
-    -webkit-animation-play-state: running!important;
-    animation-play-state: running!important;
+  .playing {
+    -webkit-animation-play-state:running!important;
+    animation-play-state:running!important;
   }
 }
 
+@-webkit-keyframes growShrink {
+  from { -webkit-transform: none; transform: none; }
+  50% { -webkit-transform: scale(1.5); transform: scale(1.5); }
+  to { -webkit-transform: none; transform: none; }
+}
+
 @keyframes growShrink {
-  from { transform: none; }
-  50% { transform: scale(1.5); }
-  to { transform: none; }
+  from { -webkit-transform: none; transform: none; }
+  50% { -webkit-transform: scale(1.5); transform: scale(1.5); }
+  to { -webkit-transform: none; transform: none; }
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: none; transform: none; }
+  50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  to { -webkit-transform: none; transform: none; }
 }
 
 @keyframes spin {
-  from { transform: none; }
-  50% { transform: rotate(360deg); }
-  to { transform: none; }
+  from { -webkit-transform: none; transform: none; }
+  50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  to { -webkit-transform: none; transform: none; }
+}
+
+@-webkit-keyframes lineDisappear {
+  from { stroke-dashoffset: null; }
+  50% { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: null; }
 }
 
 @keyframes lineDisappear {
   from { stroke-dashoffset: null; }
   50% { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: null; }
+}
+
+@-webkit-keyframes lineCrawl {
+  from { stroke-dashoffset: null; }
+  50% { stroke-dashoffset: 0; }
   to { stroke-dashoffset: null; }
 }
 

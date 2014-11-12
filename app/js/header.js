@@ -149,36 +149,17 @@ function generateSteps(xOffset) {
   $steps.appendTo($svg);
 }
 
-function animateCircles() {
-  $('circle').attr("class", "playing");  
-}
-
-function animateCrosses() {
-  $('.cross line').attr("class", "playing");
-}
-
-function animateSquigglies() {
-  $('.squiggly').attr("class", "squiggly playing");
-}
-
-function animateSteps() {
-  $('.steps').attr("class", "steps playing");
-}
-
 function startAnimation() {
-  animateCircles();
-  animateCrosses();
-  animateSquigglies();
-  animateSteps();
+  $('circle').attr("class", "playing");
+  $('.cross line').attr("class", "playing");
+  $('.squiggly').attr("class", "squiggly playing");
+  $('.steps').attr("class", "steps playing");
 }
 
 function stopAnimation() {  
   $('circle').attr("class", null);
-  
   $('.cross line').attr("class", null);
-  
   $('.squiggly').attr("class", "squiggly");
-  
   $('.steps').attr("class", "steps");
 }
 

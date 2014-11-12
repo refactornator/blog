@@ -35,14 +35,16 @@ function reloadDisqus() {
 }
 
 $(function() {
-  initMasonry();
+  var onMobile = mobilecheck();
 
-  if(mobilecheck()) {
-    $("header svg").attr('class', 'playing');
+  if(onMobile) {
+    startAnimation();
   } else {
     $(".social-share").velocity("fadeIn");
     $("header").hover(startAnimation, stopAnimation);
   }
+
+  initMasonry();
 });
 
 document.onclick = function(e) {
