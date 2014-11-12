@@ -38,14 +38,9 @@ $(function() {
   initMasonry();
 
   if(mobilecheck()) {
-    var socialShare = document.querySelectorAll('.social-share');
-
-    if(socialShare && socialShare.length > 0) {
-      socialShare[0].style.display = 'none';
-    }
-
     $("header svg").attr('class', 'playing');
   } else {
+    $(".social-share").velocity("fadeIn");
     $("header").hover(startAnimation, stopAnimation);
   }
 });
