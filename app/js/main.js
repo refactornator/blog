@@ -85,7 +85,8 @@ document.onclick = function(e) {
             $.Velocity(containerEl, {
               opacity: [ 1, 0 ], translateY: [ 0, 20 ], translateZ: 0
             }, {
-              duration: 300
+              duration: 300,
+              queue: false
             });
           }
         });
