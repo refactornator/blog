@@ -23,7 +23,7 @@ function initMasonry() {
 }
 
 function reloadDisqus() {
-  if(DISQUS !== undefined && document.querySelector('#disqus_thread')) {
+  if(typeof DISQUS !== 'undefined' && document.querySelector('#disqus_thread')) {
     var url = window.location.href,
       title = document.title;
 
