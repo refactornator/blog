@@ -7,6 +7,9 @@ window.mobilecheck = function() {
   return check;
 }
 
+var onMobile = mobilecheck();
+var $socialShare = $(".social-share");
+
 function initMasonry() {
     var container = document.querySelector('#projects');
 
@@ -34,16 +37,24 @@ function reloadDisqus() {
   }
 }
 
-$(function() {
-  var onMobile = mobilecheck();
+function reloadShare() {
+  if(!onMobile) {
+    if(document.querySelector('.post')) {
+      $socialShare.velocity("fadeIn");
+    } else {
+      $socialShare.velocity("fadeOut");
+    }
+  }
+}
 
+$(function() {
   if(onMobile) {
     startAnimation();
   } else {
-    $(".social-share").velocity("fadeIn");
     $("header").hover(startAnimation, stopAnimation);
   }
 
+  reloadShare();
   initMasonry();
 });
 
@@ -81,6 +92,7 @@ document.onclick = function(e) {
           complete: function(e) {
             initMasonry();
             reloadDisqus();
+            reloadShare();
 
             $.Velocity(containerEl, {
               opacity: [ 1, 0 ], translateY: [ 0, 20 ], translateZ: 0
