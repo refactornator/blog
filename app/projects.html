@@ -4,75 +4,21 @@ title: Projects - William Lindner, 2 n's.
 ---
 
 <div id="projects">
-  <div class="project">
-    <a style="display:block" target="_blank" href="http://spotsyapp.com">
-      <div class="thumbnail" style="background-image: url('/img/projects/spotsy.png')"></div>
-      <h2>Spotsy</h2></a>
-      <h4>iOS App</h4>
-      <p>Spotsy aims to fill the void of insightful search on the Instagram platform. The goal was to create a delightful experience through an intuitive interface, and interactions.
-      </p>
+  {% for project in site.projects %}
+    <div class="project">
+      {% if project.link %} <a style="display:block" target="_blank" href="{{ project.link }}"> {% endif %}
+      <div class="thumbnail" style="background-image: url('/img/projects/{{ project.thumbnail }}')"></div>
+      <h2>{{ project.title }}</h2>
+      {% if project.link %} </a> {% endif %}
+      <h4>{{ project.type }}</h4>
+      <p>{{ project.description }}</p>
       {% for tag in site.tags %}
         {% assign tagName = tag | first %}
-        {% if tagName == 'spotsy' %}
+        {% if tagName == project.tag %}
           {% assign posts = tag | last %}
-          <a class="tag-posts" href="/tags/{{ tagName }}">{{ posts | size | pluralize: "blog post" }}</a>
+          <a class="tag-posts" href="/tags/{{ project.tag }}">{{ posts | size | pluralize: "blog post" }}</a>
         {% endif %}
       {% endfor %}
-  </div>
-
-  <div class="project">
-    <div class="thumbnail" style="background-image: url('/img/projects/anm-logo.png')"></div>
-    <h2>Apartments Near Metro</h2>
-    <h4>Web App</h4>
-    <p>Find your place to live in the most active areas in DC. This project has been retired. Click here to read more.</p>
-  </div>
-
-  <div class="project">
-    <a style="display:block" target="_blank" href="https://www.7cf.us">
-      <div class="thumbnail" style="background-image: url('/img/projects/7corners.png')"></div>
-      <h2>7 Corners</h2>
-      <h4>Web App</h4>
-      <p>7 Corners Financial is a web platform for loan applications and dispersions. In a lead developer role, I focused on an experience that felt as real time as possible.</p>
-    </a>
-  </div>
-
-  <div class="project">
-    <a style="display:block" target="_blank" href="http://codepen.io/wlindner/pen/IKGJi">
-      <div class="thumbnail" style="background-image: url('/img/projects/add-remove.png')"></div>
-      <h2>Add + Remove</h2>
-      <h4>Fun</h4>
-      <p>Codepen prototype proof of concept in response to a dribbble shot.</p>
-    </a>
-  </div>
-
-  <div class="project">
-    <a style="display:block" target="_blank" href="http://zoomdata.com">
-      <div class="thumbnail" style="background-image: url('/img/projects/zoomdata-logo.png')"></div>
-      <h2>Zoomdata</h2>
-      <h4>Big Data Analytics</h4>
-      <p>Big Data visualization.</p>
-    </a>
-  </div>
-
-  <div class="project">
-    <a style="display:block" target="_blank" href="https://github.com/wlindner/Yeoman-Gateway">
-      <div class="thumbnail" style="background-image: url('/img/projects/yeoman-gateway.png')"></div>
-      <h2>Yeoman Gateway</h2></a>
-      <h4>Open Source</h4>
-      <p>This project aims to give you a starting point for a large Client Side MV* webapp.</p>
-      {% for tag in site.tags %}
-        {% assign tagName = tag | first %}
-        {% if tagName == 'yeoman-gateway' %}
-          {% assign posts = tag | last %}
-          <a class="tag-posts" href="/tags/{{ tagName }}">{{ posts | size | pluralize: "blog post" }}</a>
-        {% endif %}
-      {% endfor %}
-  </div>
-
-  <div class="project">
-    <div class="thumbnail" style="background-image: url('/img/projects/courier.png')"></div>
-    <h2>Courier</h2>
-    <h4>Web App</h4>
-    <p>Share leads with your partners.</p>
-  </div>
+    </div>
+  {% endfor %}
 </div>

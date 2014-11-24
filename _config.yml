@@ -9,6 +9,9 @@ author:
   name: William Lindner
   email: wlindner522@gmail.com
 
+collections:
+- projects
+
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
