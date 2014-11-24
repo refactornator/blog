@@ -4,7 +4,6 @@ title: Craigslist Killed ApartmentsNearMetro.com
 tags: apartments-near-metro
 ---
 
-##ApartmentsNearMetro.com
 This was a project I started to solve a problem that I personally experienced.  During the summer of 2011 I had the unfortunate experience of needing to find a place to live in Northern Virginia.  My roommate and I agreed that our main requirements were 2 bedrooms, within our price range, and it had to be close to the metro.  Every day I would open up Craigslist.org, run a search, open all the listings that looked interesting and check them on Google Maps.  I knew there had to be a simpler way.
 
 
