@@ -287,20 +287,10 @@ footer {
     background-repeat: no-repeat;
   }
   
-  .share, .items {
+  .items {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  
-  .share {
-    transition: all 0.2s;
-    background-image: url(http://i.imgur.com/B06f0qo.png);
-  }
-
-  .items > .item {
-    opacity: 0;
-    transform: translate(44px, 0);
   }
   
   .twitter {
@@ -317,16 +307,6 @@ footer {
     transition: all 0.2s;
     transition-delay: 0.1s;
   }
-}
-
-.social-share:focus .share {
-  transform: translate(-44px,0);
-  opacity: 0;
-}
-
-.social-share:focus .item {
-  transform: translate(0, 0);
-  opacity: 1;
 }
 
 /*****************************************************************************/
