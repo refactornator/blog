@@ -4,7 +4,6 @@
 var width = $('header').width(),
     height = $('header').height(),
     margin = Math.min(width, height) * .2,
-    vendorPrefix = getVendorPrefix(),
     $svg = $('header svg'),
     minCircleR = 10,
     maxCircleR = 25,
@@ -52,13 +51,14 @@ function generateCircle(r, cx, cy) {
   var circle = $circle[0],
       circleAnimationName = 'growShrink',
       circleDuration = randomIntFromInterval(duration / 1.2, duration * 1.2) + 'ms';
-  circle.style[vendorPrefix + 'animation'] = circleAnimationName + ' ' + circleDuration + ' ' + easeInOutQuart + ' 0 infinite';
+  circle.style['animation'] = circleAnimationName + ' ' + circleDuration + ' ' + easeInOutQuart + ' infinite';
+  circle.style['transformOrigin'] = cx + 'px ' + cy + 'px';
   
   $circle.appendTo($svg);
 }
 
 function generateCross(size, x, y) {
-  var g = $(SVG('g'))
+  var $g = $(SVG('g'))
     .attr('class', 'cross')
     .attr('transform', 'translate(' + x + ' ' + y + ')');
   
@@ -68,25 +68,27 @@ function generateCross(size, x, y) {
     .attr('x2', size)
     .attr('y2', size);
 
-  
   var $line2 = $(SVG('line'))
     .attr('x1', 0)
     .attr('y1', size)
     .attr('x2', size)
     .attr('y2', 0);
   
-  var line1 = $line1[0],
+  var g = $g[0],
+      line1 = $line1[0],
       line2 = $line2[0],
       crossAnimationName = 'spin',
       crossDuration = randomIntFromInterval(duration / 1.2, duration * 1.2) + 'ms',
-      crossAnimation = crossAnimationName + ' ' + crossDuration + ' ease-in-out 0 infinite';
+      crossAnimation = crossAnimationName + ' ' + crossDuration + ' ease-in-out infinite';
   
-  line1.style[vendorPrefix + 'animation'] = crossAnimation;
-  line2.style[vendorPrefix + 'animation'] = crossAnimation;
+  line1.style['animation'] = crossAnimation;
+  line2.style['animation'] = crossAnimation;
+  line1.style['transformOrigin'] = size / 2 + 'px ' + size / 2 + 'px';
+  line2.style['transformOrigin'] = size / 2 + 'px ' + size / 2 + 'px';
   
   $line1.appendTo(g);
   $line2.appendTo(g);
-  g.appendTo($svg);
+  $g.appendTo($svg);
 }
 
 function generateSquiggly(xOffset, yOffset, wide, tall) {
@@ -112,7 +114,7 @@ function generateSquiggly(xOffset, yOffset, wide, tall) {
   var squiggly = $squiggly[0],
       squigglyAnimationName = 'lineDisappear',
       squigglyDuration = randomIntFromInterval(duration * 2, duration * 2.5) + 'ms';
-  squiggly.style[vendorPrefix + 'animation'] = squigglyAnimationName + ' ' + squigglyDuration + ' ' + easeInOutQuart + ' 0 infinite';
+  squiggly.style['animation'] = squigglyAnimationName + ' ' + squigglyDuration + ' ' + easeInOutQuart + ' infinite';
   
   $squiggly.appendTo($svg)
 }
@@ -144,7 +146,7 @@ function generateSteps(xOffset) {
   var steps = $steps[0],
       stepsAnimationName = 'lineCrawl',
       stepsDuration = randomIntFromInterval(duration * 2, duration * 2.5) + 'ms';
-  steps.style[vendorPrefix + 'animation'] = stepsAnimationName + ' ' + stepsDuration + ' linear 0 infinite';
+  steps.style['animation'] = stepsAnimationName + ' ' + stepsDuration + ' linear infinite';
   
   $steps.appendTo($svg);
 }
@@ -156,7 +158,7 @@ function startAnimation() {
   $('.steps').attr("class", "steps playing");
 }
 
-function stopAnimation() {  
+function stopAnimation() {
   $('circle').attr("class", null);
   $('.cross line').attr("class", null);
   $('.squiggly').attr("class", "squiggly");
@@ -169,14 +171,4 @@ function SVG(tag) {
 
 function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
-}
-
-function getVendorPrefix() {
-    var styles = window.getComputedStyle(document.documentElement, ''),
-        pre = (Array.prototype.slice
-            .call(styles)
-            .join('')
-            .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-            )[1];
-    return '-' + pre + '-';
 }

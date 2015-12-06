@@ -20,11 +20,7 @@ $snuggles: #829fd9;
 @mixin vertical-align {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-   -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-     -o-transform: translateY(-50%);
-        transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /* Global Reset */
@@ -374,12 +370,7 @@ header {
   width: 100%;
   background: #f3f5f8;
   position: relative;
-
-  -webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-     -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
+  transform-style: preserve-3d;
 
   a {
     font-weight: bold;
@@ -404,12 +395,10 @@ header {
   circle, line, path {
     fill: none;
     stroke: white;
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    
+    transform-origin: center center;
+
     /*Set our animation play state to paused initially */
-    -webkit-animation-play-state:paused!important;
-    animation-play-state:paused!important;
+    animation-play-state: paused!important;
   }
 
   circle {
@@ -426,50 +415,25 @@ header {
   }
 
   .playing {
-    -webkit-animation-play-state:running!important;
-    animation-play-state:running!important;
+    animation-play-state: running!important;
   }
 }
 
-@-webkit-keyframes growShrink {
-  from { -webkit-transform: none; transform: none; }
-  50% { -webkit-transform: scale(1.5); transform: scale(1.5); }
-  to { -webkit-transform: none; transform: none; }
-}
-
 @keyframes growShrink {
-  from { -webkit-transform: none; transform: none; }
-  50% { -webkit-transform: scale(1.5); transform: scale(1.5); }
-  to { -webkit-transform: none; transform: none; }
-}
-
-@-webkit-keyframes spin {
-  from { -webkit-transform: none; transform: none; }
-  50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
-  to { -webkit-transform: none; transform: none; }
+  from { transform: none; }
+  50% { transform: scale(1.5); }
+  to { transform: none; }
 }
 
 @keyframes spin {
-  from { -webkit-transform: none; transform: none; }
-  50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
-  to { -webkit-transform: none; transform: none; }
-}
-
-@-webkit-keyframes lineDisappear {
-  from { stroke-dashoffset: null; }
-  50% { stroke-dashoffset: 50; }
-  to { stroke-dashoffset: null; }
+  from { transform: none; }
+  50% { transform: rotate(360deg); }
+  to { transform: none; }
 }
 
 @keyframes lineDisappear {
   from { stroke-dashoffset: null; }
   50% { stroke-dashoffset: 50; }
-  to { stroke-dashoffset: null; }
-}
-
-@-webkit-keyframes lineCrawl {
-  from { stroke-dashoffset: null; }
-  50% { stroke-dashoffset: 0; }
   to { stroke-dashoffset: null; }
 }
 
