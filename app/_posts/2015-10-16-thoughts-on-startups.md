@@ -4,8 +4,6 @@ title: Thoughts on Startups
 tags: life
 ---
 
-Thoughts on Startups
-
 Maybe it's because I spent the last couple of months interviewing for a new job in San Francisco, or maybe it's because I just spent the past 3 years as a co-founder of Zoomdata. But, I have a few thoughts on my mind about startups that I feel I should really write down. These are from my own limited perspective and from what I've gathered talking to friends and colleagues in the industry. This is written from the perspective of a software engineer, because that's what I've done.
 
 First off, what is a startup? In my opinion, a startup is a company that doesn't know what it's product is. They're also usually small. And, they usually survive on some source of outside money (investors or self-funded). Being a startup isn't really a good or bad thing, in the same way that being a traditional company is not a good or bad thing. Neither is more or less nobel than the other and every company is different.
