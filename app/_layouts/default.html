@@ -67,7 +67,7 @@
             <div class="center">
                 <div class="contact left">
                     <p>
-                        <a target="_blank" href="mailto:wlindner522@gmail.com">© 2015 William Lindner</a>
+                        <a id="copyright" target="_blank" href="mailto:wlindner522@gmail.com">© 2016 William Lindner</a>
                     </p>
                 </div>
                 <div class="contact right">
@@ -99,6 +99,10 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-33225523-1');ga('send','pageview');
+    </script>
+
+    <script>
+        document.getElementById('copyright').text = '© ' + (new Date().getFullYear().toString()) + ' William Lindner';
     </script>
 
     <!-- build:js(app) /js/scripts.js -->
