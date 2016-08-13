@@ -82,9 +82,6 @@
 
       </div>
 
-    <!-- Dummy #disqus_thread to keep embed.js from Disqus from complaining -->
-    <div id="disqus_thread" style="display: none;"></div>
-
     <!-- build:js(app) /js/vendor.js -->
     <!-- bower:js -->
     <script src="/_bower_components/jquery/dist/jquery.js"></script>
@@ -102,19 +99,6 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-33225523-1');ga('send','pageview');
-    </script>
-
-    <!-- Load Disqus -->
-    <script type="text/javascript">
-        var disqus_shortname = 'williamlindner';
-
-        if (document.location.hostname !== "localhost") {
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        }
     </script>
 
     <!-- build:js(app) /js/scripts.js -->
