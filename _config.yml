@@ -22,8 +22,9 @@ include: ['.htaccess']
 future: true
 show_drafts: true
 
-# Markdown library
-markdown: redcarpet
-#   extensions: ['fenced_code_blocks', 'smart']
-
-highlighter: pygments
+# Conversion
+lsi: false
+markdown: kramdown
+highlighter: rouge
+incremental: false
+excerpt_separator: "\n\n"
