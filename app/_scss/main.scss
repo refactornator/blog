@@ -214,6 +214,7 @@ footer {
 @media all and (max-width: 830px) {
   footer {
     margin: 0 20px;
+    width: calc(100% - 40px);
 
     .contact {
       line-height: normal;
