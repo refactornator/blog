@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Codepen - Add and Remove
-tags: codepen-add-remove
+tags: codepen
 ---
 
 I was browsing Dribbble the other day and ran across this cool animation created by Dribbble user [Toxinboy](https://dribbble.com/Toxinboy).
