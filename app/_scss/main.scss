@@ -58,6 +58,11 @@ a         { color: #00a; display: inline-block; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
 
+iframe {
+  display: block;
+  margin: 16px auto;
+}
+
 img, video, canvas {
   max-width: 100%;
   height: auto;
