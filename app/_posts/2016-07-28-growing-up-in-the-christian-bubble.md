@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Relationship with Christianity
+title: Growing Up in the Christian Bubble
 tags: life
 ---
 
