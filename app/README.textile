@@ -1,3 +1,11 @@
+h1. Setup Instructions
+* add `export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"` to `~/.bash_profile`
+* `sudo gem install jekyll bundler`
+* `sudo bundle install`
+* `yarn global add grunt-cli bower`
+* `bower install`
+* `grunt serve`
+
 h1. This is the data for my blog
 
 It is automatically transformed by "Jekyll":http://github.com/mojombo/jekyll into a static site whenever I push this repository to GitHub.
