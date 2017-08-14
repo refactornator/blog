@@ -4,7 +4,7 @@ title: An Excerpt from Sapiens
 tags: life
 ---
 
-I recently read the book [Sapiens: A Brief History of Mankind](https://read.amazon.com/kp/embed?asin=B00ICN066A&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_mGftybS79880R&tag=williamlindne-20) and I found it really enjoyable. It delves into how we, as humans, got here. One excerpt really stood out to me, so I'm keeping it here as a reminder of lessons I've learned in the past. It reminds me that throughout all human history, we have come up with elaborate systems and ideologies (like religions and politics) to trick ourselves into happiness.
+I recently read the book [Sapiens: A Brief History of Mankind](https://read.amazon.com/kp/embed?asin=B00ICN066A&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_mGftybS79880R&tag=williamlindne-20){:target="_blank"} and I found it really enjoyable. It delves into how we, as humans, got here. One excerpt really stood out to me, so I'm keeping it here as a reminder of lessons I've learned in the past. It reminds me that throughout all human history, we have come up with elaborate systems and ideologies (like religions and politics) to trick ourselves into happiness.
 
 >If happiness is based on feeling pleasant sensations, then in order to be happier we need to re-engineer our biochemical system. If happiness is based on feeling that life is meaningful, then in order to be happier we need to delude ourselves more effectively. Is there a third alternative?
 >
